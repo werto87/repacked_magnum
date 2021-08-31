@@ -84,13 +84,38 @@ target_include_directories(${TARGET_NAME} PRIVATE
   )
   
 
+
+
+
+
+
+
 target_link_libraries(${TARGET_NAME} PRIVATE
 ${PROJECT_WARNINGS}
 ${PROJECT_OPTIONS}
-CONAN_PKG::repacked_corrade
-CONAN_PKG::vulkan-headers
-CONAN_PKG::openal
+
+CONAN_PKG::repacked_corrade    
+if(WITH_SDL2APPLICATION)
 CONAN_PKG::sdl
+endif(WITH_GL)
+
+if(WITH_GL)
+CONAN_PKG::gl
+endif()
+
+if(WITH_VK)
+CONAN_PKG::vulkan-headers
+endif()
+
+if(WITH_AUDIO)
+CONAN_PKG::openal
+endif()
+
+
+
+
+
+#${CONAN_LIBS}
 )
 
 
