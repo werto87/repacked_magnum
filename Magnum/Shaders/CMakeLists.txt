@@ -1,0 +1,25 @@
+target_sources(${TARGET_NAME} PRIVATE
+DistanceFieldVectorGL.h
+Shaders.h
+FlatGL.h
+Vector.h
+VectorGL.h
+Generic.h
+Flat.h
+DistanceFieldVectorGL.cpp
+visibility.h
+VertexColor.h
+VectorGL.cpp
+MeshVisualizer.h
+FlatGL.cpp
+Phong.h
+GenericGL.h
+PhongGL.h
+MeshVisualizerGL.cpp
+DistanceFieldVector.h
+PhongGL.cpp
+VertexColorGL.cpp
+MeshVisualizerGL.h
+VertexColorGL.h
+)
+add_subdirectory(Implementation)

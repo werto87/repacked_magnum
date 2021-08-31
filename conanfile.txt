@@ -1,0 +1,8 @@
+[requires]
+repacked_corrade/0.0.1
+vulkan-headers/1.2.184
+openal/1.21.1
+sdl/2.0.16
+[generators]
+cmake
+[options]
