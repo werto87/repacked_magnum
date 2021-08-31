@@ -112,7 +112,7 @@ if(WITH_AUDIO)
 endif()
 
 target_link_libraries(${TARGET_NAME} PRIVATE
-${PROJECT_WARNINGS}
+#${PROJECT_WARNINGS}
 ${PROJECT_OPTIONS}
 CONAN_PKG::repacked_corrade    
 )
