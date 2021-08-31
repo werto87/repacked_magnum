@@ -97,7 +97,7 @@ ${PROJECT_OPTIONS}
 CONAN_PKG::repacked_corrade    
 if(WITH_SDL2APPLICATION)
 CONAN_PKG::sdl
-endif(WITH_GL)
+endif()
 
 if(WITH_GL)
 CONAN_PKG::gl
