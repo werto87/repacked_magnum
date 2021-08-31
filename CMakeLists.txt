@@ -87,35 +87,34 @@ target_include_directories(${TARGET_NAME} PRIVATE
 
 
 
+if(WITH_SDL2APPLICATION)
+    target_link_libraries(${TARGET_NAME} PRIVATE
+    CONAN_PKG::sdl
+    )
+endif()
 
+if(WITH_GL)
+    target_link_libraries(${TARGET_NAME} PRIVATE
+    CONAN_PKG::gl
+    )
+endif()
 
+if(WITH_VK)
+    target_link_libraries(${TARGET_NAME} PRIVATE
+    CONAN_PKG::vulkan-headers
+    )
+endif()
+
+if(WITH_AUDIO)
+    target_link_libraries(${TARGET_NAME} PRIVATE
+    CONAN_PKG::openal
+    )
+endif()
 
 target_link_libraries(${TARGET_NAME} PRIVATE
 ${PROJECT_WARNINGS}
 ${PROJECT_OPTIONS}
-
 CONAN_PKG::repacked_corrade    
-if(WITH_SDL2APPLICATION)
-CONAN_PKG::sdl
-endif()
-
-if(WITH_GL)
-CONAN_PKG::gl
-endif()
-
-if(WITH_VK)
-CONAN_PKG::vulkan-headers
-endif()
-
-if(WITH_AUDIO)
-CONAN_PKG::openal
-endif()
-
-
-
-
-
-#${CONAN_LIBS}
 )
 
 
