@@ -3,11 +3,18 @@ Platform.h
 Screen.h
 WindowlessIosApplication.h
 ScreenedApplication.hpp
-Sdl2Application.h
+
 ScreenedApplication.h
-Sdl2Application.cpp
+
 WebApplication.css
 )
+
+if(WITH_SDL2APPLICATION)
+    target_sources(${TARGET_NAME} PRIVATE
+    Sdl2Application.h
+    Sdl2Application.cpp
+    )
+endif()
 
 
 if(MAGNUM_TARGET_GL)

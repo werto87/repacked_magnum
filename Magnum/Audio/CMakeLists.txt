@@ -10,7 +10,6 @@ PlayableGroup.cpp
 BufferFormat.h
 Renderer.h
 AbstractImporter.h
-Extensions.h
 visibility.h
 Source.cpp
 Context.cpp
@@ -23,5 +22,13 @@ Source.h
 Playable.cpp
 Audio.cpp
 )
+
+if(WITH_AUDIO)
+    target_sources(${TARGET_NAME} PRIVATE
+    Extensions.h
+    )
+endif()
+
+
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/configure.h.cmake
 ${CMAKE_CURRENT_BINARY_DIR}/configure.h)
